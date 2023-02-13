@@ -1,0 +1,119 @@
+<div class="chowCentaur mod-footswitch">
+  <div mod-role="drag-handle" class="mod-drag-handle"></div>
+  <div class="mod-control-group chowCentaur-container clearfix">
+    <div class="knobs">
+      <div class="mod-knob">
+        <div
+          class="mod-knob-image"
+          mod-role="input-control-port"
+          mod-widget-rotation="270"
+          mod-port-symbol="gain"
+        ></div>
+        <div class="mod-knob-title">gain</div>
+      </div>
+      <div class="mod-knob">
+        <div
+          class="mod-knob-image"
+          mod-role="input-control-port"
+          mod-widget-rotation="270"
+          mod-port-symbol="treble"
+        ></div>
+        <div class="mod-knob-title">treble</div>
+      </div>
+      <div class="mod-knob">
+        <div
+          class="mod-knob-image"
+          mod-role="input-control-port"
+          mod-widget-rotation="270"
+          mod-port-symbol="level"
+        ></div>
+        <div class="mod-knob-title">output</div>
+      </div>
+    </div>
+    <div class="brand" mod-role="drag-handle">
+      <div class="brand-name" >
+        <h1>Centaur</h1>
+      </div>
+    </div>
+    <div class="bypass">
+      <div class="mod-footswitch" mod-role="bypass">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="64px" height="64px" viewBox="0.5 0.5 64 64" enable-background="new 0.5 0.5 64 64" xml:space="preserve">
+         <path  fill="#1E1E1E" stroke="#1D0007" stroke-width="2" stroke-miterlimit="10" d="M31.996,3.191
+       c16.245,0,29.411,13.166,29.411,29.408c0,16.234-13.166,29.4-29.411,29.4C15.758,62,2.593,48.834,2.593,32.6
+       C2.593,16.357,15.758,3.191,31.996,3.191z" class="ledring"/>
+         <polygon fill="#999999" stroke="#666666" stroke-width="2" stroke-miterlimit="10" points="13.521,42.421 13.697,21.496 
+       32.173,11.674 50.477,22.776 50.298,43.698 31.822,53.521 "/>
+         <path fill="#CCCCCC" stroke="#B3B3B3" stroke-width="2" stroke-miterlimit="10" d="M31.997,14.357
+       c10.076,0,18.242,8.166,18.242,18.24c0,10.07-8.166,18.236-18.242,18.236c-10.071,0-18.237-8.166-18.237-18.236
+       C13.76,22.523,21.926,14.357,31.997,14.357z"/>
+     </svg>
+
+        <!-- <div class="brand-name">
+          <h1>Centaur</h1>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="mod-pedal-input">
+      {{#effect.ports.audio.input}}
+      <div
+        class="mod-input mod-input-disconnected"
+        title="{{name}}"
+        mod-role="input-audio-port"
+        mod-port-symbol="{{symbol}}"
+      >
+        <div class="mod-pedal-input-image"></div>
+      </div>
+      {{/effect.ports.audio.input}} {{#effect.ports.midi.input}}
+      <div
+        class="mod-input mod-input-disconnected"
+        title="{{name}}"
+        mod-role="input-midi-port"
+        mod-port-symbol="{{symbol}}"
+      >
+        <div class="mod-pedal-input-image"></div>
+      </div>
+      {{/effect.ports.midi.input}} {{#effect.ports.cv.input}}
+      <div
+        class="mod-input mod-input-disconnected"
+        title="{{name}}"
+        mod-role="input-cv-port"
+        mod-port-symbol="{{symbol}}"
+      >
+        <div class="mod-pedal-input-image"></div>
+      </div>
+      {{/effect.ports.cv.input}}
+    </div>
+    <div class="mod-pedal-output">
+      {{#effect.ports.audio.output}}
+      <div
+        class="mod-output mod-output-disconnected"
+        title="{{name}}"
+        mod-role="output-audio-port"
+        mod-port-symbol="{{symbol}}"
+      >
+        <div class="mod-pedal-output-image"></div>
+      </div>
+      {{/effect.ports.audio.output}} {{#effect.ports.midi.output}}
+      <div
+        class="mod-output mod-output-disconnected"
+        title="{{name}}"
+        mod-role="output-midi-port"
+        mod-port-symbol="{{symbol}}"
+      >
+        <div class="mod-pedal-output-image"></div>
+      </div>
+      {{/effect.ports.midi.output}} {{#effect.ports.cv.output}}
+      <div
+        class="mod-output mod-output-disconnected"
+        title="{{name}}"
+        mod-role="output-cv-port"
+        mod-port-symbol="{{symbol}}"
+      >
+        <div class="mod-pedal-output-image"></div>
+      </div>
+      {{/effect.ports.cv.output}}
+    </div>
+  </div>
+</div>
