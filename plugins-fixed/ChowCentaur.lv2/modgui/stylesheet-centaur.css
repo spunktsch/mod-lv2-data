@@ -1,6 +1,6 @@
 :root {
   --text-color: #4c0000;
-  --art-color:#611b00;
+  --art-color: #611b00;
   --gap-15: 15px 0;
   --gap-8: 8px 0px;
   --padding-sections: 0 10px;
@@ -17,36 +17,112 @@
 
 .chowCentaur {
   /* background: url("/resources/knobs/bd.svg{{{ns}}}") no-repeat center; */
-  background: linear-gradient(
-    140deg,
-    #e9ae4c 0%,
-    #e9ae4c 100%
-  );
+  background: linear-gradient(140deg, #e9ae4c 0%, #e9ae4c 100%);
   border-radius: 5px;
   background-repeat: no-repeats;
   width: 200px;
   height: 400px;
-  border-radius: 24px;
-  color: #604B45;
+  border-radius: 40px;
+  color: #604b45;
   font-size: 20px;
   /* padding: 20px 15px; */
 }
 
-.chowCentaur .mod-control-group {
+/* GRID */
+.chowCentaur .chowCentaur-container {
+  /* margin: 0px 5px; */
+  border-radius: 40px;
+  /* border: #4c0000 1px solid; */
+  background-image: url(/resources/knobs/centaur2.svg{{{ns}}});
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-color: rgba(185, 168, 10, 0.25);
+  background-position: -50px 15px;
+  padding: 20px 15px;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  grid-template-areas:
+    "knobs"
+    "optns"
+    "brand"
+    "bypass";
+}
+
+/* SWITCH */
+
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 25px;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.mod-footswitch {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1em;
+  width: 1em;
+  background: rgba(70, 70, 70, 0.9);
+  border-radius: 64px;
+  transition: all 0.7s;
+  --spread: 50px;
+  border-radius: 50%;
+  background: #23090975;
+  box-shadow:  12px 12px 24px #bc9234,
+               -12px -12px 24px #fac244;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container .mod-footswitch.off {
+  background: rgba(186, 43, 43, 0.8);
+  background: #833ab4a9;
+  box-shadow: -10px -10px var(--spread) 0px #5b51d8,
+    0 -10px var(--spread) 0px #833ab4, 10px -10px var(--spread) 0px #e1306c,
+    10px 0 var(--spread) 0px #fd1d1d, 10px 10px var(--spread) 0px #f77737,
+    0 10px var(--spread) 0px #fcaf45, -10px 10px var(--spread) 0px #ffdc80;
+}
+
+/* Style the checkmark/indicator */
+.container .mod-footswitch:after {
+  /* left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #f0f0f0;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg); */
+}
+
+/* .chowCentaur .mod-control-group {
   position: relative;
   align-content: center;
   text-align: center;
-}
+} */
 
-.chowCentaur .mod-control-group .mod-knob {
+/* .chowCentaur .mod-control-group .mod-knob {
   background-repeat: no-repeat;
   align-content: center;
   text-transform: uppercase;
   font-size: var(--btn-text-size);
   z-index: 30;
-}
+} */
 
-.chowCentaur .mod-control-group .mod-knob-image {
+.chowCentaur .mod-knob-image {
   /* padding: 8px; */
   /* background-image: url(/resources/knobs/knob_flat_sprite.png{{{ns}}}); */
   background-image: url(/resources/knobs/knob-trad.svg{{{ns}}});
@@ -92,8 +168,7 @@
   background-image: url(/resources/knobs/button_flat_dark_off.svg{{{ns}}});
 }
 
-.chowCentaur .mod-control-group .mod-footswitch {
-  /* padding: 8px; */
+/* .chowCentaur .mod-control-group .mod-footswitch {
   background-image: url(/resources/knobs/bypass_on.svg{{{ns}}});
   background-repeat: no-repeat;
   background-position: center;
@@ -104,9 +179,9 @@
 }
 
 .chowCentaur .mod-control-group .mod-footswitch.off {
-  /* padding: 8px; */
+
   background-image: url(/resources/knobs/bypass_off.svg{{{ns}}});
-}
+} */
 
 .chowCentaur .brand-name h1 {
   font-size: 40px;
@@ -136,28 +211,6 @@
 
 } */
 
-/* GRID */
-.chowCentaur .chowCentaur-container {
-  /* margin: 0px 5px; */
-  border-radius: 5px;
-  border: #4c0000 1px solid;
-  background-image: url(/resources/knobs/centaur2.svg{{{ns}}});
-  background-size: 500px;
-  background-repeat: no-repeat;
-  background-color: rgba(185, 168, 10, 0.25);
-  background-position: -50px 15px;
-  padding: 20px 15px;
-  display: grid;
-  height: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 2fr 1fr;
-  grid-template-areas:
-    "knobs"
-    "optns"
-    "brand"
-    "bypass";
-}
-
 .chowCentaur .gap-15 {
   gap: var(--gap-15);
 }
@@ -178,6 +231,7 @@
   grid-template-columns: 1fr;
   align-self: center;
   grid-area: optns;
+  justify-items: center;
 }
 
 .chowCentaur .brand {
@@ -191,5 +245,7 @@
   display: grid;
   gap: var(--gap-15);
   grid-template-columns: 1fr;
-  grid-area: bypass;
+  justify-items: center;
+  width: min-content;
+  /* grid-area: bypass; */
 }

@@ -7,8 +7,8 @@
     mod:brand "ChowCentaur" ;
     modgui:gui [
         modgui:resourcesDirectory <modgui> ;
-        modgui:iconTemplate <modgui/icon_pedal.html> ;
-        modgui:stylesheet <modgui/stylesheet_pedal.css> ;
+        modgui:iconTemplate <modgui/icon-centaur.html> ;
+        modgui:stylesheet <modgui/stylesheet-centaur.css> ;
         modgui:screenshot <modgui/screenshot.png> ;
         modgui:thumbnail <modgui/thumbnail.png> ;        
     ] .

@@ -1,7 +1,56 @@
-<div class="chowCentaur mod-footswitch">
+<div class="chowCentaur mod-pedal">
   <div mod-role="drag-handle" class="mod-drag-handle"></div>
-  <div class="mod-control-group chowCentaur-container clearfix">
-    <div class="knobs">
+  <div class="chowCentaur-container">
+    <div class="control-group mod-control-group clearfix">
+      <div class="knobs ">
+        <div class="mod-knob">
+          <div
+            class="mod-knob-image"
+            mod-role="input-control-port"
+            mod-widget-rotation="270"
+            mod-port-symbol="gain"
+          ></div>
+          <div class="mod-knob-title">gain</div>
+        </div>
+          <div class="mod-knob">
+            <div
+              class="mod-knob-image"
+              mod-role="input-control-port"
+              mod-widget-rotation="270"
+              mod-port-symbol="treble"
+            ></div>
+            <div class="mod-knob-title">tone</div>
+          </div>
+      </div>
+      <div class="optns">
+        <div class="mod-knob">
+          <div
+            class="mod-knob-image"
+            mod-role="input-control-port"
+            mod-widget-rotation="270"
+            mod-port-symbol="level"
+          ></div>
+          <div class="mod-knob-title">level</div>
+        </div>
+      </div>
+    </div>
+    <div class="plugin-name">
+      <div class="brand">
+        <div class="brand-name">
+          <h1>Centaur</h1>
+        </div>
+      </div>
+    </div>
+    <div class="control-group ">
+        <div class="container bypass mod-control-group clearfix">
+          <!-- <input checked="checked" type="checkbox" /> -->
+          <div class="mod-footswitch" mod-role="bypass"></div>
+        </div>
+    </div>
+  </div>
+
+  
+    <!--     <div class="knobs">
       <div class="mod-knob">
         <div
           class="mod-knob-image"
@@ -39,10 +88,8 @@
       </div>
     </div>
     <div class="bypass">
-      <div class="mod-footswitch" mod-role="bypass">
-
-      </div>
-    </div>
+      <div class="mod-footswitch" mod-role="bypass"></div>
+    </div> -->
 
     <div class="mod-pedal-input">
       {{#effect.ports.audio.input}}
